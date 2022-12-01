@@ -14,7 +14,7 @@ export default function ShaneLife() {
     <>
       {/* Google Drive Src */}
       <iframe
-        src="https://geo.dailymotion.com/player/xaygu.html?video=x8fx1nc"
+        src="/videos/two.mp4"
         allow="autoplay; fullscreen; picture-in-picture"
         allowfullscreen
         frameborder="0"
