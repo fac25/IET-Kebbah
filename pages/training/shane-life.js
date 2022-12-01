@@ -20,7 +20,7 @@ export default function ShaneLife() {
         frameborder="0"
         width="640"
         height="360"
-        className="pointer-events-none"
+        // className="pointer-events-none"
       ></iframe>
 
       {/* Options Component*/}
