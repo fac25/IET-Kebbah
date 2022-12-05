@@ -1,4 +1,4 @@
-import { table } from "./Airtable"
+import { surveyTable } from "./Airtable";
 
 // const example = {
 //     "fields": {
@@ -13,16 +13,15 @@ import { table } from "./Airtable"
 // }
 
 export default async function createUserResponse(surveyAnswers) {
-    try {
-        const createdRecords = await table.create([surveyAnswers])
-        const createdRecord = {
-            id: createdRecords[0].id,
-            fields: createdRecords[0].fields
-        }
-        console.log(createdRecord)
-    }
-    catch (err) {
-        console.log(err)
-        return err
-    }
+  try {
+    const createdRecords = await surveyTable.create([surveyAnswers]);
+    const createdRecord = {
+      id: createdRecords[0].id,
+      fields: createdRecords[0].fields,
+    };
+    console.log(createdRecord);
+  } catch (err) {
+    console.log(err);
+    return err;
+  }
 }
