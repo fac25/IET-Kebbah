@@ -3,11 +3,9 @@ const Airtable = require("airtable");
 // SURVEY -----------------------------------------------
 const surveyBase = new Airtable({
   apiKey: process.env.NEXT_PUBLIC_AIRTABLE_API_KEY,
-}).base(process.env.NEXT_PUBLIC_AIRTABLE_SURVEY_BASE_ID);
+}).base(process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID);
 
-const surveyTable = surveyBase(
-  process.env.NEXT_PUBLIC_AIRTABLE_SURVEY_TABLE_NAME
-);
+const surveyTable = surveyBase(process.env.NEXT_PUBLIC_AIRTABLE_TABLE_NAME);
 
 const minifyRecord = (record) => {
   return {
